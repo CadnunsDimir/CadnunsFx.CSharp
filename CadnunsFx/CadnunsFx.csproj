@@ -65,6 +65,9 @@
   <ItemGroup>
     <Compile Include="Automation\Example\PortaSerial_Exemplo.cs" />
     <Compile Include="Automation\PortaSerial.cs" />
+    <Compile Include="Data\DBConectBase.cs" />
+    <Compile Include="Data\DBConect_LocalDB.cs" />
+    <Compile Include="Data\DBConect_MySql.cs" />
     <Compile Include="Data\LocalDBConn.cs" />
     <Compile Include="Data\MySqlConn.cs" />
     <Compile Include="Data\SqliteConn.cs" />
