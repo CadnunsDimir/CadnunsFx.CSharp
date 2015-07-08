@@ -36,5 +36,16 @@ namespace CadnunsFx.Data
             return valor;
         }
 
+        public bool TrueIfExists(string query)
+        {
+            conexao.Open();
+            dbComando.CommandText = query;
+            Object valor = dbComando.ExecuteScalar();
+            conexao.Close();
+            if (valor.Equals(null))
+                return false;
+            else
+                return true;
+        }
     }
 }
