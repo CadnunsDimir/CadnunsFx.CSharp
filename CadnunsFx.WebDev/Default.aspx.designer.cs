@@ -29,5 +29,14 @@ namespace CadnunsFx.WebDev {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::CadnunsFx.WebDev.Ucs.SqlControl SqlControl;
+        
+        /// <summary>
+        /// SqlControl1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::CadnunsFx.WebDev.Ucs.SqlControl SqlControl1;
     }
 }

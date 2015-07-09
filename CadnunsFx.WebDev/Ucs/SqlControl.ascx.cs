@@ -11,11 +11,27 @@ namespace CadnunsFx.WebDev.Ucs
     {
         public string Title { get; set; }
         public string Description { get; set; }
+        public string cmdVerifica { get; set; }
+        public string cmdExecuta { get; set; }
+        public SqlControlType Type { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             title.InnerText = Title;
-            description.InnerText = Description; 
-                //@"Usado para criar template padronizado para comandos SQL" : Description;
+            description.InnerText = Description;            
+        }
+
+        public enum SqlControlType
+        {
+            Default
+        }
+        protected void btnVerifRegistro_Click(object sender, EventArgs e)
+        {
+            btnExecAction.Enabled = true;
+        }
+
+        protected void btnExecAction_Click(object sender, EventArgs e)
+        {
+            btnExecAction.Enabled = false;
         }
     }
 }
