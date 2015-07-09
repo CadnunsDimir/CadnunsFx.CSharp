@@ -11,6 +11,6 @@
     <p runat="server" id="description"></p>
     <asp:TextBox ID="tboxCodCeden" runat="server" style="margin-top:15px; width:100%" placeholder="Número Cedente"></asp:TextBox>
     Status : <asp:Label ID="statusOp" runat="server" Text="Status"></asp:Label>
-    <asp:Button ID="btnVerifRegistro" runat="server" Text="Verificar Registro" style="margin-top:15px; width:100%" OnClick="btnVerifRegistro_Click"/>    
+    <asp:Button ID="btnVerifRegistro" runat="server" Text="Verificar Registro" Style="margin-top: 15px; width: 100%" OnClick="btnVerifRegistro_Click" />    
     <asp:Button ID="btnExecAction" runat="server" Enabled="false" Text="Executar Ação" style="margin-top:15px; width:100%" OnClick="btnExecAction_Click"/>
 </article>
