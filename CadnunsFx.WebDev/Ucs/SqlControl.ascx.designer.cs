@@ -40,6 +40,15 @@ namespace CadnunsFx.WebDev.Ucs {
         protected global::System.Web.UI.WebControls.TextBox tboxCodCeden;
         
         /// <summary>
+        /// statusOp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label statusOp;
+        
+        /// <summary>
         /// btnVerifRegistro control.
         /// </summary>
         /// <remarks>

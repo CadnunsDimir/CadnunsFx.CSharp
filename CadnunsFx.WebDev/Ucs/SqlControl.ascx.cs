@@ -28,9 +28,28 @@ namespace CadnunsFx.WebDev.Ucs
         {
             btnExecAction.Enabled = true;
         }
+        //criar método que verifica se um texto é número
+
+        private static bool TrueIfNumber(string texto)
+        {
+            try{                
+                int.Parse(texto);
+                return true;
+            }catch{
+                return false;
+            }
+        }
 
         protected void btnExecAction_Click(object sender, EventArgs e)
         {
+            if (TrueIfNumber(tboxCodCeden.Text))
+            {
+                statusOp.Text = "Número convertido";
+            }
+            else
+            {
+                statusOp.Text = "Erro ao converter número";
+            }
             btnExecAction.Enabled = false;
         }
     }
