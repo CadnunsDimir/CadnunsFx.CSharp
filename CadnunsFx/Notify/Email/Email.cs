@@ -40,7 +40,7 @@ Requer autenticação: Sim
         public string nomeRemetente { get; set; }
         private string _host = "smtp.mail.yahoo.com.br";
         private string _username = "tiago.cadnuns@yahoo.com.br";
-        private string _password = "nfbqt77j";
+        private string _password = "nffhghfhgjbqtnnnnnnnnn77j";
         private int _port = 587;
 
         
