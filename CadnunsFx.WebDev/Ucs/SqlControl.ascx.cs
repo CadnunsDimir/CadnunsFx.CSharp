@@ -14,6 +14,15 @@ namespace CadnunsFx.WebDev.Ucs
         public string cmdVerifica { get; set; }
         public string cmdExecuta { get; set; }
         public SqlControlType Type { get; set; }
+        public GridView gvPainel;
+        public SqlControl()
+        {
+
+        }
+        public SqlControl(ref GridView gvPainel)
+        {
+            this.gvPainel = gvPainel;
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             title.InnerText = Title;

@@ -1,6 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="CadnunsFx.WebDev.Default" %>
 
 <%@ Register Src="~/Ucs/SqlControl.ascx" TagPrefix="uc1" TagName="SqlControl" %>
+<%@ Register Src="~/Ucs/Login.ascx" TagPrefix="uc1" TagName="Login" %>
+
 
 
 <!DOCTYPE html>
@@ -24,11 +26,27 @@
             box-shadow: 2px 5px 5px grey;
             display:inline-block;
         }
+        #LoginForm{
+            max-width: 500px;
+            padding:15px;
+            background-color: #7483dd;            
+            border-radius: 5px;
+            box-shadow: 2px 5px 5px grey;
+        }
+        #LoginForm input[type=text]{
+            font-size: 20pt;
+            text-align :center;
+        }
+        #LoginForm input[type=submit]{
+            font-size: 17pt;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+            <uc1:Login runat="server" id="Login" />
+            <asp:GridView id="gvVerRegistro" runat="server"></asp:GridView>
             <uc1:SqlControl runat="server" id="SqlControl" Title="Controle Taxa"  Description="Usado para corrigir a taxa"/>
             <uc1:SqlControl runat="server" id="SqlControl1" Title="Controle Taxa"  Description="Usado para corrigir a taxa"/>
             

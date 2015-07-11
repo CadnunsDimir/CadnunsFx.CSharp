@@ -12,11 +12,19 @@ namespace CadnunsFx.WebDev
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                FakeData();
+            }
+        }
+
+        void FakeData(){
             List<Pessoa> lista = new List<Pessoa>();
-            
-            lista.Add(new Pessoa{
-                Nome="Tiago",
-                Job="Desenvolvedor Jr."
+
+            lista.Add(new Pessoa
+            {
+                Nome = "Tiago",
+                Job = "Desenvolvedor Jr."
             });
             lista.Add(new Pessoa
             {
@@ -26,6 +34,7 @@ namespace CadnunsFx.WebDev
             RptPessoas.DataSource = lista;
             RptPessoas.DataBind();
         }
+
         class Pessoa
         {
             public string Nome { get; set; }
