@@ -36,11 +36,11 @@ Requer SSL: Sim
 Requer autenticação: Sim
          * 
          */
-
+        //      ESSAS INFOS DEVEM FICAR NO WEB.CONFIG OU APP.CONFIG !!!!!! CODIGO PRECISAR SER REFATORADO !!!!
         public string nomeRemetente { get; set; }
         private string _host = "smtp.mail.yahoo.com.br";
         private string _username = "tiago.cadnuns@yahoo.com.br";
-        private string _password = "nffhghfhgjbqtnnnnnnnnn77j";
+        private string _password = "nffhghfdhdjhdjhaksdaskhdhgjbqtnnnnnnnnn77j";
         private int _port = 587;
 
         
