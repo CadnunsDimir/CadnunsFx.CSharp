@@ -15,7 +15,7 @@
         body{
             font-family:sans-serif;
         }
-        #rptItem{
+        .rptItem{
             border:solid 2px black;
             border-radius: 5px;
             margin:10px;
@@ -27,11 +27,14 @@
             display:inline-block;
         }
         #LoginForm{
+            margin: 0 auto;
             max-width: 500px;
             padding:15px;
             background-color: #7483dd;            
             border-radius: 5px;
             box-shadow: 2px 5px 5px grey;
+            margin-top:20px;
+            margin-bottom:20px;
         }
         #LoginForm input[type=text]{
             font-size: 20pt;
@@ -46,14 +49,16 @@
     <form id="form1" runat="server">
         <div>
             <uc1:Login runat="server" id="Login" />
-            <asp:GridView id="gvVerRegistro" runat="server"></asp:GridView>
+            <asp:GridView EmptyDataText="O Comando executado não retornou nenhum dado" Width ="100%" id="gvVerRegistro" runat="server">
+                
+            </asp:GridView>
             <uc1:SqlControl runat="server" id="SqlControl" Title="Controle Taxa"  Description="Usado para corrigir a taxa"/>
             <uc1:SqlControl runat="server" id="SqlControl1" Title="Controle Taxa"  Description="Usado para corrigir a taxa"/>
             
                         <h1 runat="server" id="rptName"></h1>
             <asp:Repeater ID="RptPessoas" runat="server" OnItemDataBound="RptPessoas_ItemDataBound">
                 <ItemTemplate>
-                    <article id="rptItem">
+                    <article class="rptItem">
                         <h1 runat="server" id="rptName"></h1>
                         <p runat="server" id="rptJob"></p>
                     </article>

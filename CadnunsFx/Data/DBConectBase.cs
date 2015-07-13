@@ -11,12 +11,11 @@ namespace CadnunsFx.Data
     {
         DbConnection conexao;       
         DbCommand dbComando;
-        public DBConectBase(DbConnection conexao, DbCommand dbComando)            
+        public DBConectBase(DbConnection conexao, DbCommand dbComando)
         {
             this.conexao = conexao;
             this.dbComando = dbComando;
         }
-
         public void comando(string query)
         {
             conexao.Open();
@@ -25,7 +24,6 @@ namespace CadnunsFx.Data
             dbComando.ExecuteNonQuery();
             conexao.Close();
         }
-
         public object retornaValoresUnicos(string query)
         {
             conexao.Open();
@@ -35,7 +33,6 @@ namespace CadnunsFx.Data
             conexao.Close();
             return valor;
         }
-
         public bool TrueIfExists(string query)
         {
             conexao.Open();
@@ -46,6 +43,24 @@ namespace CadnunsFx.Data
                 return false;
             else
                 return true;
+        }
+        /// <summary>
+        ///     Retorna um Objeto do tipo DbDataReader(base de todos os DataReader's)
+        ///     OBS: A
+        ///</summary>
+        /// <param name="query">Query SQL de busca no banco</param>
+        public DbDataReader GetDataReader(string query){
+            DbDataReader reader = null;            
+            conexao.Open();
+            dbComando.CommandText = query;
+            dbComando.Connection = conexao;
+            reader = dbComando.ExecuteReader();
+            //conexao.Close();
+            return reader;
+        }
+        public void CloseConn()
+        {
+            conexao.Close();
         }
     }
 }

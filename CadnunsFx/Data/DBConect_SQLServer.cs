@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CadnunsFx.Data
 {
-    class DBConect_SQLServer : DBConectBase
+    public class DBConect_SQLServer : DBConectBase
     {
         public DBConect_SQLServer(String connString)
             : base(new SqlConnection(connString), new SqlCommand())

@@ -14,8 +14,10 @@ namespace CadnunsFx.WebDev
         {
             if (!IsPostBack)
             {
-                FakeData();
+                //FakeData();
             }
+
+            SqlControl.gvPainel = gvVerRegistro;
         }
 
         void FakeData(){
@@ -34,7 +36,6 @@ namespace CadnunsFx.WebDev
             RptPessoas.DataSource = lista;
             RptPessoas.DataBind();
         }
-
         class Pessoa
         {
             public string Nome { get; set; }

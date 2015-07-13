@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using CadnunsFx.Data;
 
 namespace CadnunsFx.WebDev.Ucs
 {
@@ -35,7 +36,17 @@ namespace CadnunsFx.WebDev.Ucs
         }
         protected void btnVerifRegistro_Click(object sender, EventArgs e)
         {
-            btnExecAction.Enabled = true;
+            
+            if (gvPainel != null)
+            {
+                DBConect_SQLServer conexao = new DBConect_SQLServer(App_Strings.ConnString);
+                gvPainel.DataSource = conexao.GetDataReader("Select * from cadfx_usuarios");
+                gvPainel.DataBind();//injeta conteudo na lista
+                gvPainel.Dispose();//limpa conteudo recebido
+                conexao.CloseConn();//fecha conexao com o banco
+                btnExecAction.Enabled = true;
+            }
+
         }
         //criar método que verifica se um texto é número
 
